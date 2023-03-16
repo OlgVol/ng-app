@@ -9,7 +9,13 @@
 <p matListItemLine>Weight: {{character.mass}} </p>
 <p matListItemLine>Hair Color: {{character.hair_color}} </p>
 <p matListItemLine>Skin Color: {{character.skin_color}} </p>
-<p matListItemLine>Eye Color: {{character.eye_color}} </p>
+<p matListItemLine ngSwitch="{{character.eye_color}}">Eye Color:
+  <span *ngSwitchCase="'blue'" [style.color]="'blue'">{{character.eye_color}}</span>
+  <span *ngSwitchCase="'yellow'" [style.color]="'yellow'">{{character.eye_color}}</span>
+  <span *ngSwitchCase="'red'" [style.color]="'red'">{{character.eye_color}}</span>
+  <span *ngSwitchCase="'brown'" [style.color]="'brown'">{{character.eye_color}}</span>
+  <span *ngSwitchDefault>unknown</span>
+</p>
 <p matListItemLine>Birth Date: {{character.birth_year}} </p>
 <p matListItemLine>Gender: {{character.gender}}</p>
 

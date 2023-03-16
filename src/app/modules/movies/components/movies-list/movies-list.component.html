@@ -5,7 +5,7 @@
 <mat-list>
  <mat-list-item *ngFor="let movie of movies">
 <div>
-<h3 matListItemTitle> {{movie.episode_id}} - {{movie.title}}</h3>
+<h3 matListItemTitle> {{movie.episode_id}} - {{movie.title | uppercase}}</h3>
 <p matListItemLine class="wrap">Movie description : {{movie.description}}</p>
 </div>
 
