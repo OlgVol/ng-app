@@ -1,0 +1,14 @@
+<mat-toolbar color="secondary">
+  <span>Star Wars Movies</span>
+</mat-toolbar>
+
+<mat-list>
+ <mat-list-item *ngFor="let movie of movies">
+<div>
+<h3 matListItemTitle> {{movie.episode_id}} - {{movie.title}}</h3>
+<p matListItemLine class="wrap">Movie description : {{movie.description}}</p>
+</div>
+
+
+ </mat-list-item>
+</mat-list>
